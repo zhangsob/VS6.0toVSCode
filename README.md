@@ -41,6 +41,47 @@
     <https://github.com/zhangsob/Editor.html> 에서\
     editor.html을 받아서 보시면 좋습니다.
 
+## 2-1. define 즉, -D 선언하기 (즉, #ifdef) 설정하기
+  ![define설정](./ifdef.png)  
+  - -DG750 -DTOTALDEP 를 VSCode C/C++에 설정하기
+    ![config](./ccpp.config.json.png)  
+
+    *&lt;Shift>+&lt;Ctrl> + P 하여*
+
+      ```
+      > C/C++: Edit
+      ```
+    ```json
+    {
+        "configurations": [
+            {
+                "name": "Win32",
+                "includePath": [
+                    "${workspaceFolder}/**"
+                ],
+                "defines": [
+                    "_CRT_SECURE_NO_WARNINGS",
+                    "WIN32",
+                    "_WINDOWS",
+                    "LANLAN",
+                    "KM20",
+                    "G750",
+                    "TOTALDEP",
+                    "G9100",
+                    "_MBCS",
+                    "_DEBUG"
+                ],
+                "compilerPath": "cl.exe",
+                "cStandard": "c99",
+                "cppStandard": "c++11",
+                "intelliSenseMode": "windows-msvc-x64"
+            }
+        ],
+        "version": 4
+    }
+    ```
+    ![VS6.0 Settings](./vs.settings.png)
+    
 # 3. 누구는 4 TAB, 누구는 8 TAB
   - EdidtorConfig(.editorconfig화일) 로 TAB설정하기.  
     *<https://editorconfig.org/>*
