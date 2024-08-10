@@ -3,13 +3,13 @@
 # 0. 준비물
   - VS 6.0의 프로젝트는 이미 있다.
   - VS Code를 DownLoad 받아서 설치한다. <https://code.visualstudio.com/download#>
-  - 은행에 반입하는 경우 User Installer를 Download받는다.
+  - Off-Line환경에 반입하는 경우 User Installer를 Download받는다.
   - Plug-In (Extensions) 은 아래와 같다.
     > EditorConfig for VS Code\
     > C/C++\
     > C/C++ Extension Pack\
     > C/C++ Themes
-  - OFF-Line에서 Plug-In설치는 .vsix를 확장자로 설치가능하다.
+  - OFF-Line에서 Plug-In설치는 .vsix를 확장자로 설치가능하다.\
     <https://marketplace.visualstudio.com/vscode> 에서 검색하여  
     ![.vsix다운받기](./download.vsix.png)
   - .vsix설치는 아래의 그림처럼 하면 된다  
@@ -50,9 +50,18 @@
       ![functionde주석onVS2022](./function.comment.vs2022.png)\
       *VS2022*에서
 
+    **즉, VSCode로 Document Comment를 달면 추후, VS2022로 변경시 그대로 사용할 수 있다.**
+
+  - 본 문서 README.md (markdown문서)는 VSCode에서 작성하였으며, VS2022에서 확인(미리보기)할 수 있다.
+    ![MarkDown onVSCode](./markdown.vscode.png)\
+    *VSCode*에서
+
+    ![MarkDown onVS2022](./markdown.vs2022.png)\
+    *VS2022*에서
+
   - VS Code 바로가기 키(Hot Key)는\
     <https://github.com/zhangsob/Editor.html> 에서\
-    editor.html을 받아서 보시면 좋습니다.
+    editor.html을 Down받아서 PC에서 그냥 보시면 좋습니다.
 
 ## 2-1. define 즉, -D 선언하기 (즉, #ifdef) 설정하기
   ![define설정](./ifdef.png)  
