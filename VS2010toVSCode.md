@@ -1,25 +1,25 @@
-# MSBuild»ç¿ëÇÏ±â (VS2010±âÁØ)
-## 1. VSCode¿¡¼­ ÇÁ·ÎÁ§Æ®¸¦ Æú´õ¿¡ ¾Æ·¡¿Í °°Àº ¼³Á¤À» ÇÑ´Ù.
+ï»¿# MSBuildì‚¬ìš©í•˜ê¸° (VS2010ê¸°ì¤€)
+## 1. VSCodeì—ì„œ í”„ë¡œì íŠ¸ë¥¼ í´ë”ì— ì•„ë˜ì™€ ê°™ì€ ì„¤ì •ì„ í•œë‹¤.
   ```json
   {
     "terminal.integrated.profiles.windows": {
-        "Visual Studio 10": {
+        "Visual Studio 2010": {
             "path": "C:\\Windows\\System32\\cmd.exe",
             "args": ["/K", "c:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\bin\\vcvars32.bat"]
         }
     },
-    "terminal.integrated.defaultProfile.windows": "Visual Studio 10",
+    "terminal.integrated.defaultProfile.windows": "Visual Studio 2010"
   }
   ```
-  *.vscode/setting.json* ¿¡ À§°ú °°ÀÌ ¼³Á¤ÇÑ´Ù.\
-  Visual Studio 2010ÀÇ vcvars32.bat¸¦ ½ÇÇàÇØ¾ß msbuild¸¦ »ç¿ëÇÒ ¼ö ÀÖ´Ù.
+  *.vscode/setting.json* ì— ìœ„ê³¼ ê°™ì´ ì„¤ì •í•œë‹¤.\
+  Visual Studio 2010ì˜ vcvars32.batë¥¼ ì‹¤í–‰í•´ì•¼ msbuildë¥¼ ì‚¬ìš©í•  ìˆ˜ ìˆë‹¤.
 
   ![.vscode/setting.json](image/vs2010.settings.json.png)
 
-## 2. &lt;Ctrl>+`À¸·Î Terminal ¿­±â
+## 2. &lt;Ctrl>+`ìœ¼ë¡œ Terminal ì—´ê¸°
   ![vs2010.terminal](image/vs2010.terminal.png)
 
-## 3. Terminal¿¡¼­ ¾Æ·¡¿Í °°ÀÌ CompileÇÏ±â
+## 3. Terminalì—ì„œ ì•„ë˜ì™€ ê°™ì´ Compileí•˜ê¸°
   ```command
   > dir *.vcxproj
   > msbuild gartmain.vcxproj
@@ -32,5 +32,38 @@
   > msbuild gartmain.vcxproj -t:rebuild
   ```
 
-## 4. VS2022µµ .vscode/setting.jsonÀ» ¼³Á¤ÇÏ¸é µÈ´Ù.
+## 4. VS2022ë„ .vscode/settings.jsonì„ ì„¤ì •í•˜ë©´ ëœë‹¤.
+  ```cmd
+  C:\>dir vcvars*.bat /s
+   C ë“œë¼ì´ë¸Œì˜ ë³¼ë¥¨ì—ëŠ” ì´ë¦„ì´ ì—†ìŠµë‹ˆë‹¤.
+   ë³¼ë¥¨ ì¼ë ¨ ë²ˆí˜¸: 7ACC-871D
+
+   C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Auxiliary\Build ë””ë ‰í„°ë¦¬
+
+   2024-08-01  ì˜¤í›„ 10:25                39 vcvars32.bat
+   2024-08-01  ì˜¤í›„ 10:25                39 vcvars64.bat
+   2024-06-01  ì˜¤ì „ 07:05            10,524 vcvarsall.bat
+   2024-08-01  ì˜¤í›„ 10:25                43 vcvarsamd64_x86.bat
+   2024-08-01  ì˜¤í›„ 10:25                43 vcvarsx86_amd64.bat
+                 5ê°œ íŒŒì¼              10,688 ë°”ì´íŠ¸
+  ```
+  *ì‹¤í–‰í•  batë¥¼ ì°¾ê¸°*
+  ```json
+  {
+      "terminal.integrated.profiles.windows": {
+          "Visual Studio 2010": {
+              "path": "C:\\Windows\\System32\\cmd.exe",
+              "args": ["/K", "c:\\Program Files (x86)\\Microsoft Visual Studio 10.0\\VC\\bin\\vcvars32.bat"]
+          },
+          "Visual Studio 2022": {
+              "path": "C:/Windows/System32/cmd.exe",
+              //"args": ["/K", "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvars32.bat"]
+              "args": ["/K", "C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Auxiliary/Build/vcvars64.bat"]
+          }
+      },
+      "terminal.integrated.defaultProfile.windows": "Visual Studio 2022"
+  }
+  ```
+  *.vscode/settings.json* ì— Terminalì„¤ì •í•˜ê¸°
+  ![vs2022.terminal](image/vs2022.terminal.png)
 
