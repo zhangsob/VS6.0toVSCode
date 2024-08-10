@@ -30,12 +30,25 @@
   - 다른 회사에서 많이들 사용한다.
   - MS에서 만들었다. C/C++ Extension도 MS에서 만들었다. 즉, Visual Studio 2022에서도 호환된다.
   - Java Doc 처럼 주석을 넣으면.. 아래와 같이 된다.
-    - define에 대하여 주석  
-      ![define주석](./define.comment.png)  
+    - define에 대하여 주석\
+      ![define주석](./define.comment.png)\
+      *VSCode*에서
 
-    - functionde에 대하여 주석  
-      ![functionde주석](./function.comment.png)  
+      ![define주석onVS2010](./define.comment.vs2010.png)\
+      *VS2010*에서
+
+      ![define주석onVS2022](./define.comment.vs2022.png)\
+      *VS2022*에서
+
+    - functionde에 대하여 주석\
+      ![functionde주석](./function.comment.png)\
       */// Triple Slash를 하면.. 함수 바로 위줄에서 하면.. @어쩌구는 자동생성*
+
+      ![functionde주석onVS2010](./function.comment.vs2010.png)\
+      *VS2010*에서
+
+      ![functionde주석onVS2022](./function.comment.vs2022.png)\
+      *VS2022*에서
 
   - VS Code 바로가기 키(Hot Key)는\
     <https://github.com/zhangsob/Editor.html> 에서\
